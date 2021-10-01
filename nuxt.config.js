@@ -7,7 +7,7 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: pkg.name,
+    title: 'WD Blog',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -28,13 +28,15 @@ module.exports = {
   ** Global CSS
   */
   css: [
-   
+    '~/assets/styles/main.css'
   ],
 
   /*
   ** Plugins to load before mounting the App
   */
   plugins: [
+    '~plugins/core-components.js',
+    '~plugins/date-filter.js'
   ],
 
   /*
@@ -53,5 +55,9 @@ module.exports = {
     extend(config, ctx) {
 
     }
+  },
+  transition: {
+    name: 'fade',
+    mode: 'out-in'
   }
 }
